@@ -48,7 +48,7 @@ def test_inpaint():
         'mask': ('mask_image.png', mask_bytes, 'image/png')
     }
     
-    # Test payload with LoRAs
+    # Example of supported payload parameters
     payload = {
         "model_name": "model name only (no extension)",
         "prompt": "",
@@ -63,19 +63,18 @@ def test_inpaint():
         ]
     }
 
-    # Convert payload to JSON string and prepare form data
+    
     data = {
-        'request': json.dumps(payload)  # Convert payload to JSON string
+        'request': json.dumps(payload)
     }
     
     try:
         print("Sending request...")
         
-        # Send request with both files and form data
         response = requests.post(
             url,
             files=files,
-            data=data  # Use data parameter for form fields
+            data=data
         )
         
         print(f"Response status code: {response.status_code}")

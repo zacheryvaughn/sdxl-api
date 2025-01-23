@@ -22,8 +22,8 @@ from PIL import Image
 
 def test_text_to_image():
     url = "http://localhost:8000/text-to-image"
-    
-    # Test payload with LoRAs
+
+    # Example of supported payload parameters
     payload = {
         "model_name": "model name only (no extension)",
         "prompt": "",

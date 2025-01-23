@@ -42,7 +42,7 @@ def test_image_to_image():
         'image': ('source_image.png', image_bytes, 'image/png')
     }
     
-    # Test payload with LoRAs
+    # Example of supported payload parameters
     payload = {
         "model_name": "model name only (no extension)",
         "prompt": "",
@@ -60,7 +60,6 @@ def test_image_to_image():
     
     try:
         print("Sending request...")
-        # Convert payload to JSON string and properly escape it
         request_json = json.dumps(payload)
         
         response = requests.post(
@@ -69,7 +68,7 @@ def test_image_to_image():
             data={'request': request_json}
         )
         
-        print(f"Response status code: {response.status_code}")  # Debug print
+        print(f"Response status code: {response.status_code}")
         
         if response.status_code == 200:
             print("Success! Saving image...")
