@@ -17,7 +17,7 @@ A high-performance, memory-efficient API for Stable Diffusion XL operations. Bui
 - 🧹 Aggressive memory cleanup
 - 🛡️ Production-ready error handling
 
-## For MacOS Silicon (M1/M2) users:
+### For MacOS Silicon (M1/M2) users:
 ```bash
 # As of the time of posting this README, Mac Silicone users should use this Nightly version of Torch for FP16 support on MPS.
 pip install --pre torch --index-url https://download.pytorch.org/whl/nightly/cpu
