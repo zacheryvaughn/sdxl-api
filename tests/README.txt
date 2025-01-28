@@ -1,2 +1,2 @@
 These tests serve as an example but are not intended to run in this directory.
-You may utilize them by copying them into their own project directory, setting up their own virtual environemnt and installing the requirements.txt
+You may utilize them by copying them into their own project directory, setting up their own virtual environemnt and installing their requirements.txt

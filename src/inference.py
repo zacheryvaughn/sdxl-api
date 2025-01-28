@@ -61,7 +61,7 @@ from diffusers import (
 if torch.cuda.is_available():
     torch.cuda.empty_cache()
     torch.cuda.reset_peak_memory_stats()
-elif hasattr(torch.mps, 'empty_cache'):
+elif torch.backends.mps.is_available():
     torch.mps.empty_cache()
 
 class OperationType(Enum):
@@ -607,7 +607,7 @@ class SDXLInference:
             torch.cuda.reset_peak_memory_stats()
         
         # Clear MPS cache
-        if hasattr(torch.mps, 'empty_cache'):
+        if torch.backends.mps.is_available():
             torch.mps.empty_cache()
         
         # Force garbage collection

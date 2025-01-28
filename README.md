@@ -7,6 +7,9 @@
 
 A high-performance, memory-efficient API for Stable Diffusion XL operations. Built for production use with zero file storage and automatic resource cleanup.
 
+run.sh and runMac.sh are both for installation and running the app.
+runMac.sh installs a nightly version of PyTorch for better FP16 support on MPS.
+
 ## Features
 
 - 🚀 Memory-efficient operation with zero file storage
@@ -19,7 +22,7 @@ A high-performance, memory-efficient API for Stable Diffusion XL operations. Bui
 
 ### For MacOS Silicon (M1/M2) users:
 ```bash
-# As of the time of posting this README, Mac Silicone users should use this Nightly version of Torch for FP16 support on MPS.
+# As of the time of posting this README, Mac Silicone users should use this Nightly version of Torch for FP16 support on MPS. This is already included in runMac.sh, so just use bash to run that script.
 pip install --pre torch --index-url https://download.pytorch.org/whl/nightly/cpu
 ```
 The server will start on `http://localhost:8000` by default.
