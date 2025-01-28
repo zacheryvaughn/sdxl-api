@@ -46,6 +46,7 @@ import uvicorn
 import json
 from io import BytesIO
 from PIL import Image
+import os
 import gc
 from inference import SDXLConfig, LoRAConfig, SDXLInference, OperationType
 
@@ -347,4 +348,6 @@ async def health_check():
     return {"status": "healthy"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    import os
+    port = int(os.environ.get("PORT", 8080))  # <-- Add this
+    uvicorn.run(app, host="0.0.0.0", port=port)  # <-- Use `port` variable

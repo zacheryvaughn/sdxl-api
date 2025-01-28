@@ -21,7 +21,7 @@ from PIL import Image
 # LMS Karras
 
 def test_text_to_image():
-    url = "http://localhost:8000/text-to-image"
+    url = "http://localhost:8080/text-to-image"
 
     # Example of supported payload parameters
     payload = {

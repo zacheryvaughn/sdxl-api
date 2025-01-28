@@ -22,7 +22,7 @@ from PIL import Image
 # LMS Karras
 
 def test_image_to_image():
-    url = "http://localhost:8000/image-to-image"
+    url = "http://localhost:8080/image-to-image"
     
     # Open source image
     try:

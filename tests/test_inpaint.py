@@ -22,7 +22,7 @@ from PIL import Image
 # LMS Karras
 
 def test_inpaint():
-    url = "http://localhost:8000/inpaint"
+    url = "http://localhost:8080/inpaint"
     
     # Open source image and mask
     try:
